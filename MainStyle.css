@@ -1,0 +1,300 @@
+:root {
+    --primary-Strong-cyan: hsl(171, 66%, 44%);
+    --primary-light-blue: hsl(233, 100%, 69%);
+    --Neutral-Grayish-blue-dark: hsl(210, 10%, 33%);
+    --neutral-Grayish-blue: hsl(201, 11%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif
+}
+
+h1 {
+    color: var(--Neutral-Grayish-blue-dark);
+    margin-bottom: 30px;
+}
+
+p {
+    color: var(--Neutral-Grayish-blue-dark);
+    max-width: 75ch;
+    margin: 0 auto 50px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Neutral-Grayish-blue-dark);
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #fff;
+    position: relative;
+}
+
+.ios {
+    background: var(--primary-Strong-cyan);
+}
+
+.ios:hover {
+    background-color: #5dccbb;
+}
+
+.ios:hover::after {
+    background-color: #59b7a5;
+}
+
+.ios::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: #239f87;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.mac {
+    background: var(--primary-light-blue);
+}
+
+.mac:hover {
+    background-color: #8896ff;
+}
+
+.mac:hover::after {
+    background-color: #8087df;
+}
+
+.mac::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: #5261d8;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.hero {
+    background: url(../images/bg-header-desktop.png) no-repeat center;
+    background-size: cover;
+    padding: 140px 0;
+}
+
+.hero img {
+    width: 130px;
+    margin-bottom: 70px;
+}
+
+.keep_track {
+    padding: 60px 0;
+}
+
+.keep_track main {
+    display: flex;
+}
+
+.keep_track main .img {
+    min-width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.keep_track main .img img {
+    width: 110%;
+    position: relative;
+    right: 10%;
+}
+
+.features {
+    padding-left: 10vw;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.features h1,
+.features p {
+    text-align: left;
+    max-width: 40ch;
+}
+
+.features h1 {
+    font-size: 18px;
+}
+
+.features p {
+    max-width: 40ch;
+    font-size: 16px;
+}
+
+.featue+.featue {
+    padding-top: 40px;
+}
+
+.acces_anywhere {
+    padding: 65px 0;
+}
+
+.super_workflow {
+    padding: 65px 0;
+}
+
+.workflow__contair {
+    display: flex;
+    justify-content: space-around;
+    margin-block: 70px 100px;
+}
+
+.workflow__contair .workflow p {
+    max-width: 45ch;
+    font-size: 16px;
+}
+
+.workflow__contair .workflow h1 {
+    font-size: 18px;
+}
+
+.logos {
+    width: 90%;
+    margin: 00 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.download_clip {
+    padding: 90px 0;
+}
+
+footer {
+    background: #f5f6f8;
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.logo {
+    grid-column: 1/2;
+}
+
+.links {
+    grid-column: 2/5;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.links a:hover {
+    color: var(--primary-Strong-cyan);
+}
+
+.links a+a {
+    margin-left: 1rem;
+}
+
+.socials {
+    grid-column: 5;
+}
+
+.socials a+a {
+    margin-left: 20px;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+    grid-column: 2/5;
+}
+
+footer p a {
+    color: var(--primary-light-blue);
+}
+
+@media only screen and (max-width:800px) {
+    .hero {
+        background: url(../images/bg-header-mobile.png) no-repeat center top;
+        background-size: cover;
+        padding-inline: 60px;
+    }
+    .btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn+.btn {
+        margin-top: 20px;
+    }
+    .keep_track main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .features h1,
+    .features p {
+        text-align: center;
+        max-width: 40ch;
+    }
+    .super_workflow {
+        padding-inline: 40px;
+    }
+    .keep_track main .img img {
+        width: 90%;
+        margin: 40px auto;
+        position: relative;
+        right: unset;
+    }
+    .workflow__contair {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-block: 70px 100px;
+    }
+    .logos {
+        flex-direction: column;
+    }
+    .logos img {
+        width: 20%;
+        margin: 40px auto;
+    }
+    .links {
+        flex-direction: column;
+    }
+    .links a+a {
+        margin-top: 1rem;
+    }
+    .download_clip,
+    .acces_anywhere {
+        padding-inline: 40px;
+    }
+    .features {
+        padding-left: 0;
+    }
+    .featue {
+        margin: auto;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    footer>div+div {
+        margin-top: 50px;
+    }
+}
